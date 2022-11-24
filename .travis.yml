@@ -14,7 +14,7 @@ notifications:
   on_failure: always
 branches:
   only:
-    - master
+    - main
 env:
   global:
   # Remove for conciseness
@@ -27,7 +27,7 @@ before_install:
   - export PLATFORM_TEST_NAME="balita1124-platform-tests"
 script:
   - sh travis_scripts/tag_build.sh
-  - sh travis_scripts/build_services.sh
-  - sh travis_scripts/deploy_to_docker_hub.sh
-  - sh travis_scripts/deploy_amazon_ecs.sh
-  - sh travis_scripts/trigger_platform_tests.sh
+#  - sh travis_scripts/build_services.sh
+#  - sh travis_scripts/deploy_to_docker_hub.sh
+#  - sh travis_scripts/deploy_amazon_ecs.sh
+#  - sh travis_scripts/trigger_platform_tests.sh
